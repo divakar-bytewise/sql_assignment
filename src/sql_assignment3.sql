@@ -9,7 +9,7 @@ insert into dept_tbl values ('1111-MATH', 'RAHUL', 10000),
 ('2222-SCIENCE', 'AKASH', 10000),
 ('222-SCIENCE', 'ANDREW', 10000),
 ('22-CHEM', 'ANKIT', 25000),
-('3333-CHEM', 'SONIKA', 12000),
+('3333-CHEM', 'SONIKA',12000),
 ('4444-BIO', 'HITESH', 2300),
 ('44-BIO', 'AKSHAY', 10000);
 
