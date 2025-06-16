@@ -2,7 +2,7 @@
 
 This repository contains solutions for **SQL Assignment 1** focused on creating and querying an e-commerce database using SQL.
 
-## Assignment- 1 Objective
+## Objective
 
 The goal of this assignment is to practice SQL concepts such as:
 
