@@ -1,4 +1,4 @@
-# SQL Assignment
+# SQL Assignment 1
 
 This repository contains solutions for **SQL Assignment 1** focused on creating and querying an e-commerce database using SQL.
 
