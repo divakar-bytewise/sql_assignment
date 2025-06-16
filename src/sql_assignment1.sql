@@ -51,13 +51,13 @@ select * from products;
 all gives all the duplicates from all the table the alias from one line
 of query is inherited b other queries.*/
 select 'gold_members_user' as table_name, count(*) as total_records 
-from gold_members_user union all
+from gold_membership_users union all
 select 'users', count(*) from users union all
 select 'sales', count(*) from sales union all
 select 'products', count(*) from products;
 
 --the total amount each customer spent on ecommerce company.
-select s.username,sum(p.price) as total_ammount_spent from sales s
+select s.username,sum(p.price_value) as total_ammount_spent from sales s
 inner join products p  on s.product_id=p.product_id group by s.username;
 
 --distinct dates of each customer visited the website.
@@ -76,10 +76,10 @@ group by s.username,p.product_name order by max(p.product_name), count_item desc
 
 --the customer who is not the gold_member_user.
 select u.u_id,u.u_name from users u where not exists 
-(select * from gold_members_user gm where u.u_id=gm.userid); 
+(select * from gold_membership_users gm where u.u_id=gm.userid); 
 
 --the amount spent by each customer when he was the gold_member user.
-select gm.userid,gm.username,sum(p.price) as total_amount_spent from gold_members_user gm
+select gm.userid,gm.username,sum(p.price_value) as total_amount_spent from gold_membership_users gm
 inner join sales s on gm.userid=s.userid 
 inner join products p on s.product_id=p.product_id group by gm.userid, gm.username ;
 
