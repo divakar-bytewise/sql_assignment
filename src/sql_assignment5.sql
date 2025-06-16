@@ -3,13 +3,13 @@ create table sales_data (product_id int, sale_date date,quantity_sold int);
 
 --inserting value into sales_data table.
 insert into sales_data values(1, '2022-01-01', 20),
-   		(2, '2022-01-01', 15),
-   		(1, '2022-01-02', 10),
-    	(2, '2022-01-02', 25),
-    	(1, '2022-01-03', 30),
-    	(2, '2022-01-03', 18),
-    	(1, '2022-01-04', 12),
-    	(2, '2022-01-04', 22);
+(2, '2022-01-01', 15),
+(1, '2022-01-02', 10),
+(2, '2022-01-02', 25),
+(1, '2022-01-03', 30),
+(2, '2022-01-03', 18),
+(1, '2022-01-04', 12),
+(2, '2022-01-04', 22);
 
 --assigning rank by partition based on product_id and find the latest product_id sold.
 select *, rank() over(partition by product_id order by sale_date desc)
